@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Seats - Steal The Ticket</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="booking.css" />
+    <link rel="stylesheet" href="a.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h3
+          style="
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+          "
+        >
+          Steal The
+          <b style="background-color: greenyellow; color: black">Ticket</b>
+        </h3>
+        <ul>
+          <li><a href="a.html">Home</a></li>
+          <li><a href="#movies" style="color: lightskyblue">Movies</a></li>
+          <li><a href="#" style="color: violet">Theaters</a></li>
+          <li><a href="#" style="color: yellow">Bookings</a></li>
+          <li><a href="account.html">Account</a></li>
+          <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
+          <input
+            type="search"
+            placeholder="Search Movies,Theaters or Bookings"
+            id="search"
+            style="
+              border: none;
+              border-radius: 5px;
+              background-color: rgb(235, 229, 222);
+            "
+          />
+          <a href="signin.html">
+            <button class="button">Sign in</button>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <div class="booking-container">
+      <center>
+        <h2>
+          Steal Your
+          <b style="background-color: greenyellow; color: black">Seats</b>
+        </h2>
+      </center>
+      <div class="seat-selection">
+        <div class="row">
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+        </div>
+        <div class="row">
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+        </div>
+        <div class="row">
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+        </div>
+        <div class="row">
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          &nbsp; &nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+        </div>
+        <div class="row">
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          &nbsp; &nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+        </div>
+        <div class="row">
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          &nbsp; &nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+        </div>
+        <div class="row">
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          &nbsp; &nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+        </div>
+        <br /><br /><br />
+        <div class="row">
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          &nbsp; &nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+        </div>
+        <div class="row">
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          &nbsp; &nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+        </div>
+        <div class="row">
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          &nbsp; &nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+          <span class="seat" onclick="toggleSeat(this)"></span>
+        </div>
+        <div class="screen-indicator">
+          <p>Screen</p>
+          <center>
+            <hr style="border: 1px solid white; width: 50%; margin: 10px 0" />
+          </center>
+        </div>
+        <center>
+          <div style="display: flex; justify-content: center">
+            <h4>
+              <div class="row" style="margin-right: 20px">
+                <span class="seat1" style="height: 20px; width: 20px"></span>
+                Available
+              </div>
+            </h4>
+            <h4>
+              <div class="row" style="margin-right: 20px">
+                <span class="seat2" style="height: 20px; width: 20px"></span>
+                Selected
+              </div>
+            </h4>
+            <h4>
+              <div class="row" style="margin-right: 20px">
+                <span class="seat3" style="height: 20px; width: 20px"></span>
+                Occupied
+              </div>
+            </h4>
+          </div>
+        </center>
+      </div>
+      <center>
+        <button id="confirm-button">Confirm Booking</button>
+      </center>
+    </div>
+
+    <footer
+      style="
+        background-color: #222;
+        color: white;
+        padding: 20px;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* text-align: center; Center text */
+      "
+    >
+      <div style="margin-bottom: 10px">
+        <p style="margin: 0">
+          &copy; 2024 Steal The Ticket. All rights reserved.
+        </p>
+        <p style="margin: 0">Your one-stop destination for movie bookings!</p>
+      </div>
+      <div
+        style="
+          display: flex;
+          gap: 20px;
+          margin-bottom: 10px;
+          flex-wrap: wrap;
+          justify-content: center;
+        "
+      >
+        <a href="a.html" style="color: greenyellow; text-decoration: none"
+          >Home</a
+        >
+        <a href="#movies" style="color: greenyellow; text-decoration: none"
+          >Movies</a
+        >
+        <a href="#" style="color: greenyellow; text-decoration: none"
+          >Theaters</a
+        >
+        <a href="#" style="color: greenyellow; text-decoration: none"
+          >Bookings</a
+        >
+        <a href="account.html" style="color: greenyellow; text-decoration: none"
+          >Account</a
+        >
+      </div>
+      <div
+        style="
+          display: flex;
+          gap: 15px;
+          margin-bottom: 10px;
+          justify-content: center;
+        "
+      >
+        <a href="#" style="color: greenyellow; text-decoration: none">
+          <i class="fa-brands fa-square-instagram" style="font-size: 24px"></i>
+        </a>
+        <a href="#" style="color: greenyellow; text-decoration: none">
+          <i class="fa-brands fa-facebook" style="font-size: 24px"></i>
+        </a>
+        <a href="#" style="color: greenyellow; text-decoration: none">
+          <i class="fa-brands fa-youtube" style="font-size: 24px"></i>
+        </a>
+        <a href="#" style="color: greenyellow; text-decoration: none">
+          <i class="fa-brands fa-x-twitter" style="font-size: 24px"></i>
+        </a>
+        <a href="#" style="color: greenyellow; text-decoration: none">
+          <i class="fa-brands fa-linkedin" style="font-size: 24px"></i>
+        </a>
+      </div>
+      <div style="text-align: center; font-size: 12px; margin-top: 10px">
+        <p style="margin: 0">Privacy Policy | Terms of Service | Contact Us</p>
+      </div>
+    </footer>
+    <script src="booking.js"></script>
+  </body>
+</html>

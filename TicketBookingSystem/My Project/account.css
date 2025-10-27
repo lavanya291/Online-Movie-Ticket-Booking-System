@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    margin-top: 175px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.account-info,
+.order-history {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+h2 {
+    border-bottom: 1px solid greenyellow;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.logout-button {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+}
+
+.logout-button:hover {
+    background-color: darkred;
+}

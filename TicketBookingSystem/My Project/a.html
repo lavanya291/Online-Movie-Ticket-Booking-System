@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steal The Ticket</title>
+    <link rel="icon" href="ticket icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="a.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h3
+          style="
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+          "
+        >
+          Steal The
+          <b style="background-color: greenyellow; color: black">Ticket</b>
+        </h3>
+        <ul>
+          <li><a href="a.html">Home</a></li>
+          <li><a href="#Quickbook" style="color: lightskyblue">Movies</a></li>
+          <li><a href="#" style="color: violet">Theaters</a></li>
+          <li>
+            <a href="nav-bookings.html" style="color: yellow">Bookings</a>
+          </li>
+          <li><a href="account.html">Account</a></li>
+          <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
+          <input
+            type="search"
+            placeholder="Search for Movies"
+            id="search"
+            style="
+              border: none;
+              border-radius: 5px;
+              background-color: rgb(235, 229, 222);
+              outline: none;
+            "
+          />
+          <a href="signin.html">
+            <button class="button">Sign in</button>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <div id="scrollin-pics" style="height: 350px; width: 100%; margin-top: 3px">
+      <div
+        id="scrollin-pics"
+        style="
+          height: 350px;
+          width: 100%;
+          margin-top: 3px;
+          overflow: hidden;
+          position: relative;
+        "
+      >
+        <button
+          id="scroll-left"
+          style="position: absolute; left: 10px; z-index: 10; margin-top: 175px"
+        >
+          &#9664;
+        </button>
+        <img
+          src="scrolling.jpeg"
+          alt="VETTAIYAN"
+          id="scrolling"
+          style="width: 100%; transition: transform 0.5s"
+        />
+        <button
+          id="scroll-right"
+          style="
+            position: absolute;
+            right: 10px;
+            z-index: 10;
+            margin-top: 175px;
+          "
+        >
+          &#9654;
+        </button>
+      </div>
+    </div>
+    <div id="Quickbook">
+      <p style="color: whitesmoke; font-weight: 300">
+        Quick <b style="color: black; background-color: greenyellow">Book</b>
+      </p>
+      <select
+        name="movie"
+        id="movie-select"
+        style="height: 25px; border-radius: 8px; border: none"
+      >
+        <option value="">Select Movie</option>
+        <option value="">DEVARA (PART-I)</option>
+        <option value="">SWAG</option>
+        <option value="">VETTAIYAN</option>
+        <option value="">THE GREATEST OF ALL TIME</option>
+        <option value="">JOKER FOLIE AND DEUX</option>
+        <option value="">TUMBBAD</option>
+        <option value="">A.R.M (3D)</option>
+      </select>
+      <input
+        type="date"
+        name=""
+        id="date-input"
+        style="width: 200px; height: 25px; border-radius: 8px; border: none"
+      />
+      <select
+        name="cinema"
+        id="cinema-select"
+        style="height: 25px; border-radius: 8px; border: none"
+      >
+        <option value="">Select Cinema</option>
+        <option value="">INOX,Marina Mall,OMR,Channai</option>
+        <option value="">IMAX,Phoenix Marketcity,Chennai</option>
+        <option value="">Cinepolis,BSR Mall,Chennai</option>
+        <option value="">Mayajaal Cinemas,ECR,Chennai</option>
+        <option value="">Sathyam Cinemas,Chennai</option>
+        <option value="">PVR Heritage,ECR,Chennai</option>
+        <option value="">PVR,Grand mall,Velacherry</option>
+        <option value="">PVR,Aerohub,Chennai</option>
+        <option value="">PVR VR,Anna nagar,Chennai</option>
+        <option value="">PVR,Perambur</option>
+      </select>
+      <select
+        name="timing"
+        id="timing-select"
+        style="width: 200px; height: 25px; border-radius: 8px; border: none"
+      >
+        <option value="">Select Timing</option>
+        <option value="">9:00 AM . Tamil</option>
+        <option value="">10:30 AM . Telugu</option>
+        <option value="">12:00 PM . Tamil</option>
+        <option value="">1:30 PM . Telugu</option>
+        <option value="">3:00 PM . Tamil</option>
+        <option value="">5:30 PM . Tamil</option>
+        <option value="">6:30 PM . Telugu</option>
+        <option value="">8:30 PM . Tamil</option>
+        <option value="">10:30 PM . Telugu</option>
+      </select>
+      <a href="booking.html">
+        <button
+          class="button"
+          id="book-button"
+          style="width: 60px; margin-right: 60px"
+        >
+          BOOK
+        </button>
+      </a>
+    </div>
+    <div style="margin: 60px" id="movies">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <h2 style="color: whitesmoke">
+          Now <b style="color: black; background-color: greenyellow">Showing</b>
+        </h2>
+        <div>
+          <input
+            type="checkbox"
+            style="
+              height: 18px;
+              width: 25px;
+              margin: 0;
+              border-radius: 5px;
+              border: 50px solid greenyellow;
+            "
+          />
+          <label for="" style="color: whitesmoke">With Subtitle</label>
+          <select
+            name=""
+            id="genreSelect"
+            style="margin-left: 5px; border: none; border-radius: 3px"
+          >
+            <option value="">All Genres</option>
+            <option value="Action">Action</option>
+            <option value="Anime">Anime</option>
+            <option value="Drama">Drama</option>
+            <option value="Horror">Horror</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Crime">Crime</option>
+            <option value="Biography">Biography</option>
+            <option value="Romance">Romance</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Family">Family</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Musical">Musical</option>
+          </select>
+          <select
+            name=""
+            id="languageSelect"
+            style="border: none; border-radius: 3px"
+          >
+            <option value="">All Languages</option>
+            <option value="Tamil">தமிழ்</option>
+            <option value="Telugu">తెలుగు</option>
+            <option value="Hindi">हिन्दी</option>
+            <option value="Malayalam">മലയാളം</option>
+            <option value="Kannada">ಕನ್ನಡ</option>
+            <option value="English">English</option>
+          </select>
+        </div>
+      </div>
+      <div
+        style="display: flex; justify-content: space-between; flex-wrap: wrap"
+        id="movies"
+      >
+        <div
+          class="movie-item"
+          data-genre="Drama"
+          data-language="Tamil"
+          id="cine1"
+        >
+          <img src="vettiyan poster.avif" alt="vettiyan" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>VETTAIYAN</b><br />
+              U/A . Drama +1 more <br />
+              Tamil <br />
+            </p>
+            <button style="margin: 0; margin-bottom: 20px">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Action"
+          data-language="English, Tamil"
+          id="cine2"
+        >
+          <img src="venom poster.webp" alt="VENOM" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>VENOM THE LAST DANCE</b><br />
+              U/A . Action<br />
+              English,Tamil<br />
+            </p>
+            <button style="margin: 0; margin-bottom: 20px">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Drama"
+          data-language="Tamil"
+          id="cine3"
+        >
+          <img src="sir poster.avif" alt="SIR" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>SIR</b><br />
+              U/A . Drama <br />
+              Tamil<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Drama"
+          data-language="Telugu, Hindi"
+          id="cine4"
+        >
+          <img src="jigra poster.avif" alt="JIGRA" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>JIGRA</b><br />
+              U/A . Drama<br />
+              Telugu,Hindi<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Action"
+          data-language="Tamil, Telugu"
+          id="cine5"
+        >
+          <img src="the goat.avif" alt="The goat" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>The Greatest Of All Times</b><br />
+              U/A . Action <br />
+              Tamil,Telugu<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Horror"
+          data-language="Tamil"
+          id="cine6"
+        >
+          <img src="black poster.jpg" alt="BLACK" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>BLACK</b><br />
+              U/A . Horror <br />
+              Tamil<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Crime"
+          data-language="English"
+          id="cine7"
+        >
+          <img src="joker poster.webp" alt="joker" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>JOKER</b><br />
+              A . Crime +2 more<br />
+              English <br />
+            </p>
+            <button style="margin: 0; margin-bottom: 20px">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Action"
+          data-language="Tamil, Telugu"
+          id="cine8"
+        >
+          <img src="devara poster.jpg" alt="DEVARA" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>DEVARA</b><br />
+              U/A . Action +1 more<br />
+              Telugu,Tamil <br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Comedy"
+          data-language="English"
+          id="cine9"
+        >
+          <img src="goodrich poster.avif" alt="GOOD RICH" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>GOOD RICH</b><br />
+              A . Comedy <br />
+              English<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Drama"
+          data-language="Hindi"
+          id="cine10"
+        >
+          <img
+            src="binny and family poster.avif"
+            alt="BINNY AND FAMILY"
+            id="poster"
+          />
+          <div style="color: whitesmoke">
+            <p>
+              <b>BINNY AND FAMILY</b><br />
+              U/A . Drama <br />
+              Hindi<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Comedy"
+          data-language="Telugu"
+          id="cine11"
+        >
+          <img src="swag poster.avif" alt="SWAG" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>SWAG</b><br />
+              U/A . Comedy +1 more<br />
+              Telugu <br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Animation"
+          data-language="English"
+          id="cine12"
+        >
+          <img
+            src="the wild robot poster.webp"
+            alt="THE WILD ROBOT"
+            id="poster"
+          />
+          <div style="color: whitesmoke">
+            <p>
+              <b>THE WILD ROBOT</b><br />
+              U . Animation<br />
+              English<br />
+            </p>
+            <button style="margin: 0; margin-bottom: 20px">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Action"
+          data-language="Telugu"
+          id="cine13"
+        >
+          <img src="viswam poster.avif" alt="VISWAM" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>VISWAM</b><br />
+              U/A . Action +1 more<br />
+              Telugu<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Action"
+          data-language="Tamil, kannada"
+          id="cine14"
+        >
+          <img src="martin poster.jpg" alt="MARTIN" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>MARTIN</b><br />
+              U/A . Action +2 more<br />
+              Tamil,Kannada<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Drama"
+          data-language="Malayalam"
+          id="cine15"
+        >
+          <img
+            src="kishkindha kandam poster.avif"
+            alt="KISHKINDHA KANDAM"
+            id="poster"
+          />
+          <div style="color: whitesmoke">
+            <p>
+              <b>KISHKINDHA KANDAM</b><br />
+              U/A . Drama<br />
+              Malayalam<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Horror"
+          data-language="Hindi"
+          id="cine16"
+        >
+          >
+          <img src="stree poster.jpg" alt="STREE 2" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>STREE 2</b><br />
+              U/A . Horror<br />
+              Hindi<br />
+            </p>
+            <button style="margin: 0; margin-bottom: 5px">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Drama"
+          data-language="Telugu"
+          id="cine17"
+        >
+          <img
+            src="maa nanna super hero poster.avif"
+            alt="MAA NANNA SUPER HERO"
+            id="poster"
+          />
+          <div style="color: whitesmoke">
+            <p>
+              <b>MAA NANNA SUPER HERO</b><br />
+              U/A . Drama<br />
+              Telugu<br />
+            </p>
+            <button style="margin: 0; margin-bottom: 20px">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Action"
+          data-language="Malayalam"
+          id="cine18"
+        >
+          <img src="arm poster.webp" alt="A.R.M 3D" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>A.R.M. 3D</b><br />
+              U/A . Action +1 more<br />
+              Malayalam<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Drama"
+          data-language="Telugu"
+          id="cine19"
+        >
+          <img src="jag poster.avif" alt="JANAKA AYITE GANAKA" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>JANAKA AYITE GANAKA</b><br />
+              U/A . Drama<br />
+              Telugu<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Horror"
+          data-language="Tamil"
+          id="cine20"
+        >
+          <img
+            src="DEMONTE COLONY 2 POSTER.avif"
+            alt="DEMONTE COLONY-2"
+            id="poster"
+          />
+          <div style="color: whitesmoke">
+            <p>
+              <b>DEMONTE COLONY-2</b><br />
+              U/A . Horror<br />
+              Tamil<br />
+            </p>
+            <button style="margin: 0">Steal Ticket</button>
+          </div>
+        </div>
+        <div
+          class="movie-item"
+          data-genre="Drama"
+          data-language="Tamil"
+          id="cine21"
+        >
+          <img src="VAAZHAI POSTER.avif" alt="VAAZHAI" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>VAAZHAI</b><br />
+              U/A . Drama<br />
+              Tamil<br />
+            </p>
+            <button style="margin: 0; margin-bottom: 20px">Steal Ticket</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin: 60px">
+      <div>
+        <h2 style="color: whitesmoke">
+          Upcoming
+          <b style="color: black; background-color: greenyellow">Movies</b>
+        </h2>
+      </div>
+      <div
+        style="display: flex; justify-content: space-between; flex-wrap: wrap"
+      >
+        <div>
+          <img src="martin poster.jpg" alt="MARTIN" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>MARTIN</b><br />
+              U/A . Action +2 more<br />
+              Tamil,Kannada<br />
+              Releasing on Fri Oct 11 <br />
+            </p>
+            <button style="margin: 0">View Details</button>
+          </div>
+        </div>
+        <div>
+          <img src="viswam poster.avif" alt="VISWAM" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>VISWAM</b><br />
+              U/A . Action +1 more<br />
+              Telugu<br />
+              Releasing on Fri Oct 11 <br />
+            </p>
+            <button style="margin: 0">View Details</button>
+          </div>
+        </div>
+        <div>
+          <img
+            src="maa nanna super hero poster.avif"
+            alt="MAA NANNA SUPER HERO"
+            id="poster"
+          />
+          <div style="color: whitesmoke">
+            <p>
+              <b>MAA NANNA SUPER HERO</b><br />
+              U/A . Drama<br />
+              Telugu<br />
+              Releasing on Fri Oct 11 <br />
+            </p>
+            <button style="margin: 0; margin-bottom: 20px">View Details</button>
+          </div>
+        </div>
+        <div>
+          <img src="jigra poster.avif" alt="JIGRA" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>JIGRA</b><br />
+              U/A . Drama<br />
+              Telugu,Hindi<br />
+              Releasing on Fri Oct 11 <br />
+            </p>
+            <button style="margin: 0; margin-bottom: 20px">View Details</button>
+          </div>
+        </div>
+        <div>
+          <img src="ramayana poster.webp" alt="RAMAYANA" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>RAMAYANA</b><br />
+              Animation<br />
+              Hindi<br />
+              Releasing on Fri Oct 18 <br />
+            </p>
+            <button style="margin: 0; margin-bottom: 20px">View Details</button>
+          </div>
+        </div>
+        <div>
+          <img src="bogun poster.webp" alt="BOUGAINVILLEA" id="poster" />
+          <div style="color: whitesmoke">
+            <p>
+              <b>BOUGAINVILLEA</b><br />
+              Crime,Thriller<br />
+              Malayalam<br />
+              Releasing on Thu Oct 17 <br />
+            </p>
+            <button style="margin: 0; margin-bottom: 20px">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin: 60px">
+      <div>
+        <h2 style="color: whitesmoke">
+          Movie
+          <b style="color: black; background-color: greenyellow">Trailers</b>
+        </h2>
+      </div>
+      <div
+        style="display: flex; justify-content: space-between; flex-wrap: wrap"
+      >
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=zPqMbwmGC1U&pp=ygURdmV0dGFpeWFuIHRyYWlsZXI%3D"
+            style="text-decoration: none"
+          >
+            <img src="vettiyan trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://youtu.be/gQF-M8av79M?feature=shared"
+            style="text-decoration: none"
+          >
+            <img
+              src="mr.perfect trailer.png"
+              alt="trailer"
+              id="trailer-poster"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=ITQMsaLtG1U&pp=ygUMZ29hdCB0cmFpbGVy"
+            style="text-decoration: none"
+          >
+            <img src="the goat trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://youtu.be/HNYA6bqL6bU?feature=shared"
+            style="text-decoration: none"
+          >
+            <img src="devara trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=xKvz1t2sWKw&pp=ygUOdmlzd2FtIHRyYWlsZXI%3D"
+            style="text-decoration: none"
+          >
+            <img src="viswam trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=_OKAwz2MsJs&pp=ygUMam9rZXJ0cmFpbGVy"
+            style="text-decoration: none"
+          >
+            <img src="joker trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=fUekk6TVeq4&pp=ygUPa2FuZ3V2YSB0cmFpbGVy"
+            style="text-decoration: none"
+          >
+            <img src="kanguva trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=kWLX8Kn_PUs&pp=ygUObWFydGluIHRyYWlsZXI%3D"
+            style="text-decoration: none"
+          >
+            <img src="martin trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=9GKFfHcKVhk&pp=ygUQcmFtYXlhbmEgdHJhaWxlcg%3D%3D"
+            style="text-decoration: none"
+          >
+            <img src="ramayana trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=btV5vOD2LP8&pp=ygUcbWFhIG5hbm5hIHN1cGVyIGhlcm8gdHJhaWxlcg%3D%3D"
+            style="text-decoration: none"
+          >
+            <img src="mnsh trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=xh83Ioy2rro&pp=ygUcamFuYWthIGFpdGhlIGdhbmFrYSB0cmFpbGVyIA%3D%3D"
+            style="text-decoration: none"
+          >
+            <img src="jag trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=js6F9bvVghY&pp=ygUOdmVub20gdHJhaWxlciA%3D"
+            style="text-decoration: none"
+          >
+            <img src="venom trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=JAquwtYIu5E&pp=ygUYY2FwdGFpbiBhbWVyaWNhIHRyYWlsZXIg"
+            style="text-decoration: none"
+          >
+            <img
+              src="captain america trailer.png"
+              alt="trailer"
+              id="trailer-poster"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://youtu.be/67vbA5ZJdKQ?feature=shared"
+            style="text-decoration: none"
+          >
+            <img
+              src="the wild rorbot trailer.jpeg"
+              alt="trailer"
+              id="trailer-poster"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://youtu.be/3uE0RuQndZc?feature=shared"
+            style="text-decoration: none"
+          >
+            <img src="jigra trailer.png" alt="trailer" id="trailer-poster" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer
+      style="
+        background-color: #222;
+        color: white;
+        padding: 20px;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* text-align: center; Center text */
+      "
+    >
+      <div style="margin-bottom: 10px">
+        <p style="margin: 0">
+          &copy; 2024 Steal The Ticket. All rights reserved.
+        </p>
+        <p style="margin: 0">Your one-stop destination for movie bookings!</p>
+      </div>
+      <div
+        style="
+          display: flex;
+          gap: 20px;
+          margin-bottom: 10px;
+          flex-wrap: wrap;
+          justify-content: center;
+        "
+      >
+        <a href="a.html" style="color: greenyellow; text-decoration: none"
+          >Home</a
+        >
+        <a href="#movies" style="color: greenyellow; text-decoration: none"
+          >Movies</a
+        >
+        <a href="#" style="color: greenyellow; text-decoration: none"
+          >Theaters</a
+        >
+        <a href="#" style="color: greenyellow; text-decoration: none"
+          >Bookings</a
+        >
+        <a href="account.html" style="color: greenyellow; text-decoration: none"
+          >Account</a
+        >
+      </div>
+      <div
+        style="
+          display: flex;
+          gap: 15px;
+          margin-bottom: 10px;
+          justify-content: center;
+        "
+      >
+        <a
+          href="https://www.instagram.com/"
+          style="color: greenyellow; text-decoration: none"
+        >
+          <i class="fa-brands fa-square-instagram" style="font-size: 24px"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/"
+          style="color: greenyellow; text-decoration: none"
+        >
+          <i class="fa-brands fa-facebook" style="font-size: 24px"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/"
+          style="color: greenyellow; text-decoration: none"
+        >
+          <i class="fa-brands fa-youtube" style="font-size: 24px"></i>
+        </a>
+        <a
+          href="https://x.com/?lang=en"
+          style="color: greenyellow; text-decoration: none"
+        >
+          <i class="fa-brands fa-x-twitter" style="font-size: 24px"></i>
+        </a>
+        <a
+          href="https://in.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F"
+          style="color: greenyellow; text-decoration: none"
+        >
+          <i class="fa-brands fa-linkedin" style="font-size: 24px"></i>
+        </a>
+      </div>
+      <div style="text-align: center; font-size: 12px; margin-top: 10px">
+        <p style="margin: 0">Privacy Policy | Terms of Service | Contact Us</p>
+      </div>
+    </footer>
+  </body>
+  <script src="a.js"></script>
+</html>

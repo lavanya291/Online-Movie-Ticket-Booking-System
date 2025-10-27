@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="signin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Sign <b style="background-color: greenyellow; color: black">In</b>
+      </h1>
+      <form id="sign-in-form">
+        <div class="input-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <a href="a.html">
+          <button type="submit" class="button">Sign In</button>
+        </a>
+        <div id="message" style="color: greenyellow; display: none"></div>
+      </form>
+      <p>
+        Don't have an account?
+        <a href="signup.html" style="color: greenyellow">Sign Up</a>
+      </p>
+    </div>
+
+    <script src="signin.js"></script>
+  </body>
+</html>
